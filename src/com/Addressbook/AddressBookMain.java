@@ -154,7 +154,7 @@ class addressBook {
         String choice = "y";
         System.out.println("Wellcome to Address Book Program!");//Printing Welcome Message
         while(true) {
-            System.out.println("Enter 1: add 2: edit 3: delete 4: view 5: exit");
+            System.out.println("Enter 1 : add 2 : edit 3 : delete 4 : view  5: exit");
             System.out.println("Enter choice : ");
             int switchChoice = scan.nextInt();
             scan.nextLine();
@@ -184,21 +184,25 @@ class addressBook {
                         addressObject.insertContact(contact);
                     }
                     break;
+                //case for edit contact
                 case 2:
                     System.out.println("Enter name of contact to edit : ");
                     String nameToEdit = scan.nextLine();
                     addressObject.editContact(nameToEdit);
                     break;
+                //case for delete contact
                 case 3:
-                    System.out.println("Enter name of contact to edit : ");
+                    System.out.println("Enter name of contact to delete : ");
                     String deleteCon = scan.nextLine();
                     addressObject.delete(deleteCon);
                     break;
+                //case for contact list
                 case 4:
                     System.out.println("Contact List : ");
                     addressObject.printContactDetails();
                     break;
                 default:
+                //case to exist
                     System.exit(0);
             }
         }
