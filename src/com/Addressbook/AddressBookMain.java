@@ -1,6 +1,5 @@
 package com.Addressbook;
 import jdk.internal.org.objectweb.asm.tree.InsnList;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 //Declare contactDetail class with the variable
@@ -180,7 +179,7 @@ public class AddressBookMain {
         Scanner scan = new Scanner(System.in);
         String choice = "y";
         int r = 0;
-        System.out.println("Wellcome to Address Book Program!");//Printing welcome message
+        System.out.println("Welcome to Address Book Program!");//Printing welcome message
         while(r != 3) {
             //Printing the message to the user to make a choice
             System.out.println("1.CREATE AN ADDRESS BOOK");
