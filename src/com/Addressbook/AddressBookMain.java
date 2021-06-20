@@ -216,7 +216,7 @@ import java.util.Scanner;
                                     System.out.println("Enter choice : ");
                                     switchChoice = scan.nextInt();
                                     choice = "y";
-
+                                    //Switch case
                                     switch (switchChoice) {
                                         //If the user choose this case then user must provide the more contact to the AddressBook
                                         case 1:
