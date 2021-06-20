@@ -213,7 +213,7 @@ public class AddressBookMain {
         String choice = "y";
         Scanner scan = new Scanner(System.in);
         AddressBook addressObject = new AddressBook();
-        System.out.println("Wellcome to Address Book Program!");//Welcome message to the user
+        System.out.println("Welcome to Address Book Program!");//Welcome message to the user
         while (r != 3) {
             System.out.println("1.CREATE AN ADDRESS BOOK");
             System.out.println("2.ACCESS AN ADDRESS BOOK");
