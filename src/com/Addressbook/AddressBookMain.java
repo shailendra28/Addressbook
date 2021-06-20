@@ -203,6 +203,28 @@ class AddressBook {
             }
         }
     }
+    //Count person With Same City
+    public void countWithSameCity() {
+        System.out.println("Enter city name to search contact's :");
+        String citySearch = scan.nextLine();
+        for (ContactDetail contact: contactList) {
+            List<ContactDetail> countByCity = contactList.stream().filter(myContact -> myContact.getCity().equals(citySearch)).collect(Collectors.toList());
+            for (ContactDetail myContact: countByCity) {
+                System.out.println("Number of people from "+citySearch+" are:"+ countByCity.stream().count());
+            }
+        }
+    }
+    //Count person With Same State
+    public void countWithSameState() {
+        System.out.println("Enter city name to search contact's :");
+        String stateSearch = scan.nextLine();
+        for (ContactDetail contact: contactList) {
+            List<ContactDetail> countByState = contactList.stream().filter(myContact -> myContact.getCity().equals(stateSearch)).collect(Collectors.toList());
+            for (ContactDetail myContact: countByState) {
+                System.out.println("Number of people from "+stateSearch+" are:"+ countByState.stream().count());
+            }
+        }
+    }
 }
 //Main Class
 public class AddressBookMain {
