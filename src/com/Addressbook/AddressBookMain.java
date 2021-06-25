@@ -231,13 +231,29 @@ class AddressBook {
             return tempFirstName1.compareTo(tempFirstName2);
         }
     };
-    //sorting contact
+    //sorting contact by name of the person
     public void sortContact(ArrayList<AddressBook> adbook) {
         Collections.sort(contactList, AddressBook.compareFirstName);
         for(ContactDetail contact: contactList) {
             System.out.println(contact.getFirstName());
         }
     }
+    public static Comparator<ContactDetail> compareCity = new Comparator<ContactDetail>() {
+        @Override
+        public int compare(ContactDetail contactDetail, ContactDetail t2) {
+            String tempCity1 = contactDetail.getCity();
+            String tempCity2 = contactDetail.getCity();
+            return tempCity1.compareTo(tempCity2);
+        }
+    };
+    //sorting contact by city
+    public void sortContacts(ArrayList<AddressBook> adbook) {
+        Collections.sort(contactList, AddressBook.compareCity);
+        for(ContactDetail contact: contactList) {
+            System.out.println(contact.getCity());
+        }
+    }
+
 }
 //Main Class
 public class AddressBookMain {
@@ -274,7 +290,7 @@ public class AddressBookMain {
                             int switchChoice = 0;
                             while (switchChoice != 5) {
                                 System.out.println("Enter \n1: add \n2: edit \n3: delete \n4: view \n5: View persons in same city \n6: View persons in same state \n7: exit"+
-                                        "\n7: count of people from same city \n8: count of people from same state \n9: sort contact                       \n10: exit");
+                                        "\n7: count of people from same city \n8: count of people from same state \n9: sort contact \n10: sort contact by city2                       \n10: exit");
                                 System.out.println("Enter choice : ");
                                 switchChoice = scan.nextInt();
                                 choice = "y";
@@ -316,6 +332,9 @@ public class AddressBookMain {
 
                                     case 9:
                                         addressObject.sortContact(adbook);
+                                        break;
+                                    case 10:
+                                        addressObject.sortContacts(adbook);
                                         break;
                                     default:
                                         break;
