@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -40,5 +41,18 @@ public class AddressBookIO {
 
         addressBookIO.writeData(Arrays.asList(arrayOfContact));
         addressBookIO.printData();
+    }
+
+    public List<ContactDetail> readData() {
+        List<ContactDetail> addressBookList = new ArrayList<ContactDetail>();
+
+        try {
+            Files.lines(new File("AddressBook.txt").toPath())
+                    .map(line -> line.trim())
+                    .forEach(line -> System.out.println(line));
+        }catch (IOException x){
+            x.printStackTrace();
+        }
+        return addressBookList;
     }
 }
