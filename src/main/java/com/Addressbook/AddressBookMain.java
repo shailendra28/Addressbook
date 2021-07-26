@@ -1,12 +1,11 @@
 package com.Addressbook;
-//Created a nested Class with the variables
 class ContactDetail {
     public String firstname, lastname;
     public String address, city, state;
     public String zip;
     public String phoneNumber;
     public String email;
-    //Constructor of ContactDetails
+
     public ContactDetail(String firstname, String lastname, String address, String city, String state, String zip, String phonenumber, String email) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -17,7 +16,7 @@ class ContactDetail {
         this.phoneNumber = phonenumber;
         this.email = email;
     }
-    //Taking Input from the user
+
     public ContactDetail() {}
 
     public String getFirstName() {
