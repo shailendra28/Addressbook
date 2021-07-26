@@ -74,7 +74,8 @@ public class AddressBookIO {
         AddressBookIO addressBookIO = new AddressBookIO();
         ContactDetail[] arrayOfContact= {
                 new ContactDetail("shailendra", "yadav", "chembur", "mumbai", "maharashtra", "400071", "8779796556", "syadav@gmail.com") ,
-                new ContactDetail("devendra", "jadhav", "dadar", "jainpur", "utterpradesh", "451201", "99695506645", "djadhav@gmail.com")
+                new ContactDetail("devendra", "jadhav", "dadar", "jainpur", "utterpradesh", "451201", "99695506645", "djadhav@gmail.com"),
+                new ContactDetail("Mohit", "singh", "shivajinagar", "pune", "maharashtra", "788451", "98695506645", "mohit@gmail.com")
         };
         addressBookIO.writeData(Arrays.asList(arrayOfContact));
         addressBookIO.writeContactToCSV(Arrays.asList(arrayOfContact));
